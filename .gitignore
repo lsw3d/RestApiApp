@@ -147,9 +147,6 @@ activemq-data/
 # SageMath parsed files
 *.sage.py
 
-# DEM elevation data (large GeoTIFF files)
-data/dem/*.tif
-
 # Environments
 .env
 .envrc

@@ -51,6 +51,10 @@ def _download_tile(lat: int, lon: int, dest: Path) -> None:
 
 
 def download_dem(output: Path = DEM_PATH) -> Path:
+    if output.exists():
+        print(f"DEM already exists at {output}, skipping download.")
+        return output
+
     west, south, east, north = BBOX
     tiles = _tiles_for_bbox(west, south, east, north)
 
